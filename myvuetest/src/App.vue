@@ -1,23 +1,31 @@
+<script setup>
+import ConponentsTest03 from './components/conponentsTest03.vue'
+
+import{provide,ref} from 'vue'
+
+const test = ref('sehr gut')
+provide('item',test)
+
+const changeMsg = () => {
+  test.value = 'xopowo'
+}
+
+provide('itemB',changeMsg)
+</script>  
+
 <template>
-  <input ref="autoFocusInput" v-model="inputValue" placeholder="请输入内容" />
+  <div class="box">
+    <h2>祖先组件</h2>
+    <ConponentsTest03></ConponentsTest03>
+  </div>
 </template>
 
-<script setup>
-
-import {ref, onMounted} from 'vue'
-
-const input = ref('')
-
-const autoFocusInput = ref(null)
-
-onMounted(() => {
- if (autoFocusInput.value) {
-   autoFocusInput.value.focus()
- }
-})
-
-</script>
-
 <style scoped>
-
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
 </style>
