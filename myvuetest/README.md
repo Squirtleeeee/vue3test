@@ -1,69 +1,45 @@
-# myvuetest
+# Vue3 学习笔记
 
-This template should help get you started developing with Vue 3 in Vite.
+基于 Vite + Vue 3 Composition API 的日常学习仓库，使用 `<script setup>` 语法糖。
 
-## Recommended IDE Setup
+## 学习路线
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### 01 — Setup 语法糖
+`<script setup>` 基础、`ref()` 响应式变量、`@click` 事件绑定。
 
-## Recommended Browser Setup
+### 02 — Reactive / Ref / Computed
+`reactive()` 定义响应式对象、`computed()` 计算属性，对比 `ref` 与 `reactive` 的使用差异。
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### 03 — Watch 侦听器
+`watch()` 侦听 ref 对象变化、`{deep: true}` 深度侦听、通过 JSON 深拷贝保存旧值快照。
 
-## Customize configuration
+### 05 — 生命周期钩子
+`onMounted` / `onBeforeUpdate` / `onUpdated` / `onBeforeUnmount` 四个核心钩子，使用 SCSS 编写样式。
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### 06 — 组件传值（Props & Emits）
+父组件通过 `:msg` 向子组件传值（Props），子组件通过 `$emit` 向父组件发送事件（Emits）。
 
-## Project Setup
+### 07 — 模板 Ref 与 defineExpose
+`ref` 绑定子组件实例，`defineExpose()` 暴露子组件内部方法和数据给父组件调用。
+
+### 08 — 小案例：自动聚焦输入框
+综合练习：模板 ref + `onMounted` 实现页面加载后自动聚焦 input。
+
+## 技术栈
+
+| 类别 | 技术 |
+|------|------|
+| 框架 | Vue 3.5 (Composition API) |
+| 构建 | Vite 8 |
+| 路由 | Vue Router 5 |
+| 状态 | Pinia 3 |
+| 样式 | SCSS |
+| 测试 | Vitest + Playwright |
+| 工具 | ESLint + Prettier + Oxlint |
+
+## 快速开始
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
-
-```sh
-# Install browsers for the first run
-npx playwright install
-
-# When testing on CI, must build the project first
-npm run build
-
-# Runs the end-to-end tests
-npm run test:e2e
-# Runs the tests only on Chromium
-npm run test:e2e -- --project=chromium
-# Runs the tests of a specific file
-npm run test:e2e -- tests/example.spec.ts
-# Runs the tests in debug mode
-npm run test:e2e -- --debug
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
