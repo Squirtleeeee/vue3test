@@ -1,6 +1,17 @@
+# 前端学习仓库
+
+Vue 3 与 TypeScript 日常学习，两个子项目：
+
+| 目录 | 内容 |
+|------|------|
+| [myvuetest](./myvuetest/) | Vue 3 Composition API 学习（`<script setup>` 语法糖） |
+| [myTSTest](./myTSTest/) | TypeScript 基础练习（Vite + TS6） |
+
+---
+
 # Vue3 学习笔记
 
-基于 Vite + Vue 3 Composition API 的日常学习仓库，使用 `<script setup>` 语法糖。
+Vue 3 Composition API 练习，使用 `<script setup>` 语法糖。
 
 ## 学习路线
 
@@ -40,6 +51,13 @@
 ## 快速开始
 
 ```sh
+# Vue 3 学习项目
+cd myvuetest
+npm install
+npm run dev
+
+# TypeScript 练习
+cd myTSTest
 npm install
 npm run dev
 ```
