@@ -6,6 +6,7 @@ Vue 3 与 TypeScript 日常学习，两个子项目：
 |------|------|
 | [myvuetest](./myvuetest/) | Vue 3 Composition API 学习（`<script setup>` 语法糖） |
 | [myTSTest](./myTSTest/) | TypeScript 基础练习（Vite + TS6） |
+| [myTSVueTest](./myTSVueTest/) | Vue 3 + TypeScript 联合练习（ref/reactive/computed 类型标注） |
 
 ---
 
@@ -58,6 +59,11 @@ npm run dev
 
 # TypeScript 练习
 cd myTSTest
+npm install
+npm run dev
+
+# Vue 3 + TypeScript 联合练习
+cd myTSVueTest
 npm install
 npm run dev
 ```
