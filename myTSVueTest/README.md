@@ -4,6 +4,11 @@ Vue 3 Composition API 与 TypeScript 类型标注结合使用。
 
 ## 练习内容
 
+### Pinia 状态管理
+- `defineStore` 组合式 API 写法（setup store）
+- `ref` + `computed` 定义状态和计算属性
+- 组件中直接使用 store 实例
+
 ### ref 类型标注
 - `ref<number>()` 自动推断类型
 - `ref<string | number>()` 联合类型标注
@@ -25,7 +30,8 @@ Vue 3 Composition API 与 TypeScript 类型标注结合使用。
 | 类别 | 技术 |
 |------|------|
 | 框架 | Vue 3.5 (Composition API) |
-| 语言 | TypeScript 6 |
+| 状态 | Pinia 3 |
+| 语言 | TypeScript |
 | 构建 | Vite 8 |
 
 ## 快速开始
